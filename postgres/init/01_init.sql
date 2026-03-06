@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS request_logs (
+    id BIGSERIAL PRIMARY KEY,
+    worker_name VARCHAR(100) NOT NULL,
+    path VARCHAR(255) NOT NULL,
+    client_ip VARCHAR(64),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
